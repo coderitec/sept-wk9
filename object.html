@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const person1 = {}
+    const person2 = Object()
+
+    person1.name = 'francis'
+    person1.age = 55
+    person1['home address'] = 'umuchu'
+    delete person1['home address']
+
+    person1.homeAddress = 'umuchu'
+    person1['likes'] = ['football', 'history', 'jazz']
+    person1.likes[3] = 'programming'
+    person1.likes[1] = 'sit down'
+
+    //using a keyword(reserved words in JS) as a key
+    person1.let = 'let us know what you are doing'
+    person1[100] = 'hundred'
+
+    //function within an object
+    person1.readme = function(){
+        return `hello I am ${this.name}, I love ${this.likes[Math.floor(Math.random()*this.likes.length)]}`
+    }
+
+//constructor function
+
+</script>
+</html>
