@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome checker</title>
+</head>
+<body>
+    <main>
+        <h1>palindrome checker</h1>
+        <input type="text" name="pal" id="pal" placeholder="insert your text">
+        <p></p>
+    </main>
+
+</body>
+<script>
+    const input = document.querySelector('input')
+    const para = document.querySelector('p')
+
+    input.addEventListener('input', palindrome)
+
+    function palindrome(){
+        const regex = /[a-z0-9]/ig
+        const string = input.value
+        const stringMatch = string.match(regex)
+        const stringReversed = string.match(regex).reverse()
+
+        para.innerHTML = stringReversed.join('').toLowerCase()
+    }
+</script>
+</html>
