@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const math = prompt('score in math')
+        const eng = prompt('score in eng')
+
+        math >= 50 && eng >= 50 ?
+        alert('You are promoted!'):
+
+        math >= 50 || eng >= 50 ?
+        // alert(`You need to reseat ${math >= 50 ? 'English': 'Mathematics'}`): 
+        alert("You need to reseat " + (math >= 50 ? 'English': 'Mathematics')): 
+
+        alert('You are to repeat the class')
+
+    </script>
+</body>
+</html>
