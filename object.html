@@ -26,12 +26,34 @@
     person1.let = 'let us know what you are doing'
     person1[100] = 'hundred'
 
+    person1.isMale = false
+
     //function within an object
     person1.readme = function(){
-        return `hello I am ${this.name}, I love ${this.likes[Math.floor(Math.random()*this.likes.length)]}`
+        return `hello I am ${this.name}, I love ${this.likes[Math.floor(Math.random()*this.likes.length)]}. I am a ${this.isMale ?'Male' : 'Female' }`
     }
 
 //constructor function
+function Teacher(name, course, time){
+    this.name = name;
+    this.course = course;
+    this.time = time;
+    this.intro = function(){
+        return `Hi, I am ${this.name}`
+    }
+}
+
+// const val1 = {
+//     name: 'greg',
+//     age: 33
+// }
+
+const teacher1 = new Teacher('franc','frontend','weekday')
+const teacher2 = new Teacher('emeka','data science','weekend')
+
+teacher1.status = 'married'
+Teacher.prototype.gender = 'male'
+teacher1.gender = 'female'
 
 </script>
 </html>
